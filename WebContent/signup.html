@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <title>login page</title>
+
+    <link rel="stylesheet" href="signup.css" />
+    <script type="text/javascript" src="signup.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <center>
+      <h1 style="color: black">Employee Tracking System</h1>
+    </center>
+    <div class="signup-form">
+      <form action="/EPproject/signupservlet" method="post">
+        <h2 style="font-weight: bold; color: #333">Sign Up</h2>
+        <div class="form-group">
+          <div class="row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="first"
+                placeholder="First Name"
+                required="required"
+              />
+            </div>
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                name="last"
+                placeholder="Last Name"
+                required="required"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            onblur="ValidateEmail()"
+            class="form-control"
+            id="1"
+            name="email"
+            placeholder="Email"
+            required="required"
+          />
+          <span id="span1"></span>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            onblur="veripass1()"
+            class="form-control"
+            id="2"
+            name="pass"
+            placeholder="Password"
+            required="required"
+          />
+          <span id="span2"></span>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            class="form-control"
+            onblur="VerifyPass()"
+            id="3"
+            name="repass"
+            placeholder="Confirm Password"
+            required="required"
+          />
+          <span id="span3"></span>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-danger btn-lg">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

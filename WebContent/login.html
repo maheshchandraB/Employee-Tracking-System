@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>User login form</title>
+    <script type="text/javascript">
+      function formValidation() {
+        if (
+          /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/.test(
+            document.getElementById("1").value
+          )
+        ) {
+        } else {
+          alert("invalid email");
+        }
+      }
+    </script>
+
+    <style>
+      body {
+        background-image: url("OP1.jpg");
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin: 0;
+        padding: 0;
+        font-family: italic;
+      }
+      .login {
+        margin: auto;
+        width: 250px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.9);
+        padding: 80px 40px;
+        margin-top: 30px;
+        margin-right: 80vh;
+        background: linear-gradient(top, #3c3c3c 0%, #222222 100%);
+        background: -webkit-linear-gradient(top, #3c3c3c 0%, #222222 100%);
+      }
+      h2 {
+        margin: 0 0 30px 0;
+        padding: 10px;
+        color: #efed40;
+        text-align: center;
+      }
+      input {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        border: none;
+        outline: none;
+        border: 4px rgb(0, 0, 0) dotted;
+        background: transparent;
+        border-radius: 30px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        text-align: center;
+      }
+      /* : :placeholer{
+      	color: rgba(255,255,255,0.5);
+      	text-align:center;
+      } */
+      input[type=submit]{
+      	border:none;
+      	outline:none;
+      	padding:10px;
+      	color: rgb(0, 0, 0);
+      	font-size: 16px;
+      	font-family: Arial;
+      	background: #ff267e;
+      	cursor: pointer;
+      	border-radius: 20px;
+      }
+      input[type="submit"]:hover {
+        background: #efed40;
+        color: #262626;
+      }
+      a {
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      .forpass{
+      color: #262626;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login">
+      <h2>Log In Here</h2>
+      <form name="myForm" action="./Login_Servlet">
+        <input
+          type="text"
+          name="email"
+          id="1"
+          placeholder="Enter Email"
+          onblur="formValidation()"
+        />
+        <input
+          type="Password"
+          name="Password"
+          id="2"
+          placeholder="Enter Password"
+        />
+       <a href="homepage.html"> <input type="Submit" name="Login" value="LogIn" ></input></a>
+        <a class="forpass" href="#"> Forgot Password</a>
+      </form>
+    </div>
+  </body>
+</html>
